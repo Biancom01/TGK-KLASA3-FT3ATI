@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skrypt : MonoBehaviour
+public class Script : MonoBehaviour
 {
+    public float speed;
     Rigidbody2D rb2d;
     void Start()
     {
@@ -15,7 +16,8 @@ public class Skrypt : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        rb2d.AddForce(movement);
+        rb2d.AddForce(movement * speed);
+
 
 
 
