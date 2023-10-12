@@ -22,4 +22,11 @@ public class Script : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter2D(Collider2D obiekt)
+    {
+        if (obiekt.gameObject.CompareTag("collectable"))
+        {
+            Destroy(obiekt.gameObject);
+        }
+    }
 }
